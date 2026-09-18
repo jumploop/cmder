@@ -1,5 +1,42 @@
 # Change Log
 
+## [1.3.26](https://github.com/cmderdev/cmder/tree/v1.3.26) (2026-09-18)
+
+### Changes
+
+- Component Updates
+    - Update Git for Windows to 2.52.0.windows.1.
+    - Update Clink to 1.9.5.
+    - Update clink-completions to 0.6.7.
+    - Add Windows Terminal 1.23.12811.0 vendored package.
+    - ConEmu 23.07.24, update download URL to ConEmu org.
+
+- Windows Terminal integration
+    - Add OSC 9;9 directory tracking for cmd.exe and PowerShell, Duplicate Tab and Split Pane keep cwd.
+    - Add OSC 133 shell integration for PowerShell, including exit code tracking.
+
+- Prompt and shell
+    - Restore Clink gray-text autosuggestions.
+    - Git prompt supports repos with git reftables and fixes branch display in newly inited repos.
+    - Fix slow hg prompt (#3020) and another pre-existing hg prompt bug.
+    - Bash prompt consistency, grey bold lambda, MSYSTEM display, upstream user completion scripts.
+    - PowerShell profile fixes debug and verbose output, dot-notation version comparison, posh-git support for all versions.
+
+- Startup and launcher
+    - Normalize ConEmu task names to avoid double braces in run arg.
+    - init.bat and lib_base.cmd use quoted git_locale, qualified findstr, respect PATHEXT, enable excd /d flag by default.
+
+- Updater and CI
+    - update.ps1 filters pre-release and RC versions and fixes archive download handling.
+    - Replace stale AppVeyor references with GitHub Actions artifact links and improve workflow summaries.
+    - Add trailing-whitespace guard and restore colored script status output.
+
+### Fixes
+
+- Fix vendor updater command regression.
+- Fix CodeQL PowerShell parser errors and vendor workflow empty-variable failures.
+- Fix double-zip checkout issue and vendor package release and artifact URLs.
+
 ## [1.3.25](https://github.com/cmderdev/cmder/tree/v1.3.25) (2024-05-31)
 
 ### Changes
